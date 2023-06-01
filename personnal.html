@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alwin Siby</title>
+  <link rel="icon" type="image/x-icon" href="icons8-a-32.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <style>
+    /* Custom CSS Styles */
+    body {
+      padding-top: 70px;
+    }
+
+   
+    .section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #home-section {
+      background-color: #f5f5f5;
+    
+    }
+
+    #about-section {
+      background-color: #e9ecef;
+    }
+   
+
+    #skills-section {
+      background-color: #f5f5f5;
+    }
+
+    #education-section {
+      background-color: #e9ecef;
+    }
+
+    #connect-section {
+      background-color: #f5f5f5;
+    }
+
+    /* Centered Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color:midnightblue;
+    }
+
+    /* Animation */
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    /* Custom Padding for Cards */
+    .card-body {
+      padding: 20px;
+    }
+    .navbar {
+      background-color: #191970;;
+  }
+  .navbar .navbar-nav .nav-link {
+    color: #FFD700; /* Gold */
+  }
+
+  </style>
+</head>
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
+  
+  <!-- Navbar -->
+  
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #191970;">
+    <a class="navbar-brand" href="#home-section">
+        <img src="icons8-a-32.png" alt="Logo" style="width:40px;">lwin  
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#home-section">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills-section">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education-section">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#connect-section">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home-section" class="section">
+    <div class="container">
+      <h1>
+        <span id="animated-text"></span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- About Section -->
+<section id="about-section" class="section">
+    <div class="container">
+        <h1 style="color: indigo;" >About Me</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="alwin.jpeg" alt="Profile Photo" class="img-fluid mb-3" style="border-radius: 50%;">
+        </div>
+        <div class="col-md-8">
+          <p style="font-size: 175%;" >
+            I am Alwin Siby, a second-year BCA student at Mar Augustinose College
+            , Ramapuram. I am passionate about web design and development.
+            I have a good understanding of programming languages such as C,
+            C++, HTML, SQL, and Python. I enjoy creating visually appealing
+            and user-friendly websites. My goal is to continue learning and
+            growing in the field of web development and contribute to 
+            innovative projects. I am dedicated, detail-oriented,
+            and always strive for excellence in my work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  
+  <!-- Skills Section -->
+  <section id="skills-section" class="section">
+    <div class="container"><h1 style="color: indigo;">Skills</h1>
+      <div class="row">
+        <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NJRaS1Zq_2673ySfyIjjuQHaEK%26pid%3DApi&f=1&ipt=12c5040219c88d9b37d1d64e65108905094e409d6c7968a0ab1efac641189b85&ipo=images" class="card-img-top" alt="cam">
+            <div class="card-body">
+                <h4>Photography</h4>
+              <p>Skill </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.DhihH3EQWE1KHfRYhmTaJAHaEK%26pid%3DApi&f=1&ipt=eac14d4f4b97067a9bc23cd7f1300ccfb01027079855dc8dd7cded62e2ceeca0&ipo=images" class="card-img-top" alt="webdev">
+            
+            <div class="card-body">
+              <h4>Web Design and development</h4>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  
+
+  <!-- Education Section -->
+  <section id="education-section" class="section">
+    <div class="container"><h1 style="color: indigo;">Education </h1>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.A11gY0gxcYuVuJSWsj51fgHaDN%26pid%3DApi&f=1&ipt=992f253b687c7ec0424f98accff854455bb1f7ae3b747806a63b13d71f484922&ipo=images" class="card-img-top" alt="School 1">
+              <div class="card-body"><a  href="https://stphilomenasps.com/">
+                  <h4 style="color: black;" >St.Philomena's Public School and Junior College , Elanji</h4></a>
+                <p>i have completed my 10 (2020)</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.A11gY0gxcYuVuJSWsj51fgHaDN%26pid%3DApi&f=1&ipt=992f253b687c7ec0424f98accff854455bb1f7ae3b747806a63b13d71f484922&ipo=images" class="card-img-top" alt="School 2">
+              <div class="card-body">
+                  <a href="https://stphilomenasps.com/">
+                  <h4 style="color: black;" >St.Philomena's Public School and Junior College , Elanji</h4></a>
+                <p>i have completed my 12(2022)</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.OHDaRIQgqMesQyORdV7HoAHaDt%26pid%3DApi&f=1&ipt=55b2fe6c98364011970ed4982424f81681c1a29fc879810f9a226b53928c859e&ipo=images" class="card-img-top" alt="School 3">
+              <div class="card-body">
+                  <a href="https://www.maraugusthinosecollege.org/">
+                  <h4 style="color: black;" >Mar Augustinose College , Ramapuram</h4></a>
+                <p>i have enrolled for BCA at MAC Ramapuram(2022-2025)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+  <!-- Connect Section -->
+  <section id="connect-section" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h2 style="color:indigo;" >Connect with Me</h2>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" class="form-control" id="first-name" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" class="form-control" id="last-name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="text" class="form-control" id="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+        <p style="color: aliceblue;">© Alwin Siby</p>
+      <p style="color: aliceblue;">Follow Me on Social Media:</p>
+      <a href="https://github.com/alwinsibym"><img src="github white.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/alwin-siby-8528ba22b/"><img src="linkedin white.png" alt="LinkedIn"></a>
+      <a href="https://www.instagram.com/alwin_siby_/"><img src="instagram white.png" alt="Instagram"></a>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // JavaScript Form Validation
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      validateForm();
+    });
+
+    function validateForm() {
+      var firstName = document.getElementById('first-name').value;
+      var lastName = document.getElementById('last-name').value;
+      var phone = document.getElementById('phone').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      // Perform validation logic here
+
+      // Example validation: check if all fields are filled
+      if (firstName === '' || lastName === '' || phone === '' || email === '' || message === '') {
+        alert('Please fill all fields');
+      } else {
+        // Form is valid, submit the form
+        document.getElementById('contact-form').submit();
+      }
+    }
+
+    // JavaScript Animation
+    const text = "Hey, I'm Alwin Siby. Second year BCA student.";
+    let index = 0;
+    const speed = 100; // Adjust the typing speed here (in milliseconds)
+
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("animated-text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
