@@ -1,100 +1,48 @@
-# 🌐 Alwin Siby — Personal Portfolio
+# Alwin Siby: Personal Portfolio
 
-<p align="center">
-  <a href="https://alwinsibym.github.io/personal_website/">
-    <img src="https://img.shields.io/badge/Live%20Portfolio-Visit-blue?style=for-the-badge&logo=vercel" />
-  </a>
-</p>
+Live site: https://alwinsibym.github.io/personal_website/
 
-> A clean and responsive personal portfolio built to showcase my projects, skills, and journey as a software developer.
+A responsive portfolio for an MCA student and web developer. It covers projects, skills, education and contact details, and pulls recent repositories from GitHub.
 
----
+## Features
 
-## 🚀 Live Preview
+- Responsive layout from phones to wide desktops
+- Dark and light themes, following the system setting and remembered after a manual switch
+- Scroll progress shown as a kasavu-style gold stripe
+- Project grid with filters (Web, AI agents, Developer tools)
+- "Latest on GitHub" panel and a "More repositories" list, loaded live from the GitHub API and cached for 30 minutes, with a static fallback if the API is unavailable
+- Contact form that opens the visitor's email app with the message filled in
+- Keyboard navigation, visible focus, skip link and reduced-motion support
 
-🔗 https://alwinsibym.github.io/personal_website/
+## Tech
 
----
+Plain HTML, CSS and JavaScript. No build step and no dependencies, so it runs as-is on GitHub Pages. Fonts (Bricolage Grotesque, Hanken Grotesk, Noto Sans Malayalam) load from Google Fonts.
 
-## 🧑‍💻 About
+## Files
 
-This portfolio acts as my **digital identity**, designed to present:
+| File | Purpose |
+| --- | --- |
+| `index.html` | Page content and structure |
+| `style.css` | Design tokens, layout, themes, animation |
+| `script.js` | Theme, menu, filters, GitHub data, contact form |
 
-* 📂 Selected projects with real-world relevance
-* 🧠 My evolving technical skill set
-* 📈 My journey as an MCA student and developer
+## Run locally
 
-The focus was on building a **minimal, fast, and user-friendly interface** that reflects clarity in both design and code.
+Open `index.html` in a browser, or serve the folder:
 
----
+```
+python3 -m http.server 8000
+```
 
-## ✨ Features
+## Update the content
 
-* 🎯 Minimal and professional UI
-* 📱 Fully responsive across devices
-* 📂 Structured project showcase
-* 🧠 Skills section for quick overview
-* 🔗 Integrated social & contact links
-* ⚡ Optimized for performance and fast loading
+- **Projects:** copy an `<article class="card">` block in `index.html`. Set `data-tags` to any of `web`, `ai`, `tools`. Add the repository name to the `FEATURED` list in `script.js` to keep the two in sync.
+- **More repositories:** the list under the project cards shows the repositories named in `MORE` in `script.js`, with descriptions and languages read from GitHub.
+- **Latest on GitHub:** shows your four most recently pushed repositories. Add names to `HIDE` in `script.js` to leave one out.
+- **Colors:** edit the variables at the top of `style.css`.
 
----
+## Contact
 
-## 🛠️ Tech Stack
-
-* **Frontend:** HTML, CSS, JavaScript
-* **Deployment:** GitHub Pages
-
----
-
-## 📸 Preview
-
-<p align="center">
-  <img src="./assets/home.png" width="45%" />
-  <img src="./assets/projects.png" width="45%" />
-</p>
-
-<p align="center">
-  <img src="./assets/about.png" width="45%" />
-  <img src="./assets/contact.png" width="45%" />
-</p>
-
----
-
-## 🎯 Purpose
-
-This portfolio was built to:
-
-* Provide a **centralized view of my work**
-* Demonstrate **clean UI and structured development**
-* Serve as a **professional profile for internships and placements**
-
----
-
-## ⚡ What Makes It Different
-
-* Focus on **clarity over clutter**
-* Designed with a **recruiter-first mindset**
-* Highlights **quality projects instead of quantity**
-
----
-
-## 📈 Future Enhancements
-
-* 🌙 Dark / Light mode
-* 🧩 Enhanced UI interactions
-* 📝 Blog / technical write-ups
-* 🚀 Performance and accessibility improvements
-
----
-
-## 📬 Connect
-
-* 🔗 LinkedIn: https://www.linkedin.com/in/alwin-siby-8528ba22b/
-* 💻 GitHub: https://github.com/alwinsibym
-* 📧 Email: [alwinsiby123@gmail.com](mailto:alwinsiby123@gmail.com)
-
----
-
-<p align="center">
-  <i>“Building simple, scalable, and meaningful digital experiences.”</i>
-</p>
+- Email: alwinsiby123@gmail.com
+- LinkedIn: https://www.linkedin.com/in/alwin-siby/
+- GitHub: https://github.com/alwinsibym

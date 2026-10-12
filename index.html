@@ -1,218 +1,356 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
 <head>
-  <title>Alwin Siby</title>
-  <link rel="icon" type="image/x-icon" href="icons8-a-32.png">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alwin Siby | Web and AI Developer</title>
+  <meta name="description" content="Alwin Siby is an MCA student and web developer from Kerala who builds web apps, developer tools and multi-agent AI systems.">
+  <meta name="theme-color" content="#0E1330">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alwin Siby | Web and AI Developer">
+  <meta property="og:description" content="MCA student and web developer building web apps, developer tools and multi-agent AI systems.">
+  <meta property="og:url" content="https://alwinsibym.github.io/personal_website/">
+  <link rel="icon" type="image/png" href="icons8-a-32.png">
+
+  <script>
+    /* Set the theme before first paint to avoid a flash. */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&family=Hanken+Grotesk:wght@400;500;600&family=Noto+Sans+Malayalam:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body data-spy="scroll" data-target="#navbar" data-offset="50">
-  
-  <!-- Navbar -->
-  
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #191970;">
-    <a class="navbar-brand" href="#home-section">
-        <img src="icons8-a-32.png" alt="Logo" style="width:40px;">lwin  
+<body>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.9 2H22l-7.2 8.2L23 22h-6.6l-5.2-6.8L5.2 22H2l7.7-8.8L1.5 2h6.7l4.7 6.2L18.9 2zm-1.2 18h1.8L7.4 3.9H5.5L17.7 20z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></g></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="site-header" id="top">
+    <div class="wrap header-row">
+      <a class="brand" href="#hero" aria-label="Alwin Siby, home">
+        <img src="icons8-a-32.png" alt="" width="28" height="28">
+        <span>Alwin Siby</span>
       </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="#home-section">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills-section">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education-section">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#connect-section">Connect</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- Home Section -->
-  <section id="home-section" class="section">
-    <div class="container">
-      <h1>
-        <span id="animated-text"></span>
-      </h1>
-    </div>
-  </section>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-  <!-- About Section -->
-<section id="about-section" class="section">
-    <div class="container">
-        <h1 style="color: indigo;" >About Me</h1>
-      <div class="row">
-        <div class="col-md-4">
-          <img src="alwin.jpeg" alt="Profile Photo" class="img-fluid mb-3" style="border-radius: 50%;">
-        </div>
-        <div class="col-md-8">
-          <p style="font-size: 175%;" >
-            I am Alwin Siby, a second-year BCA student at Mar Augustinose College
-            , Ramapuram. I am passionate about web design and development.
-            I have a good understanding of programming languages such as C,
-            C++, HTML, SQL, and Python. My goal is to continue learning and
-            growing in the field of web development and contribute to 
-            innovative projects. 
-          </p>
-        </div>
+      <div class="header-tools">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme">
+          <svg class="i i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="i i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span class="bars" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
-  </section>
-  
+  </header>
 
-  
-  <!-- Skills Section -->
-  <section id="skills-section" class="section">
-    <div class="container"><h1 style="color: indigo;">Skills</h1>
-      <div class="row">
-        <div class="row justify-content-center">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NJRaS1Zq_2673ySfyIjjuQHaEK%26pid%3DApi&f=1&ipt=12c5040219c88d9b37d1d64e65108905094e409d6c7968a0ab1efac641189b85&ipo=images" class="card-img-top" alt="cam">
-            <div class="card-body">
-                <h4>Photography</h4>
-              <p>Skill </p>
-            </div>
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="hero" aria-labelledby="hero-name">
+      <span class="hero-glyph" lang="ml" aria-hidden="true">അ</span>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="hello rise" style="--d:.55s"><span lang="ml">നമസ്കാരം</span>, I'm</p>
+          <h1 id="hero-name" class="hero-name">
+            <span class="line"><span>Alwin</span></span>
+            <span class="line"><span>Siby</span></span>
+          </h1>
+          <p class="hero-line rise" style="--d:.95s">
+            I build <span class="typed" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span>
+            <span class="sr-only">web apps, developer tools and AI systems.</span>
+          </p>
+          <p class="lead rise" style="--d:1.05s">
+            MCA student from Kottayam, Kerala. I learn by building working systems, from web apps to multi-agent AI projects.
+          </p>
+          <div class="hero-cta rise" style="--d:1.15s">
+            <a class="btn btn-primary" href="#projects">View projects</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.DhihH3EQWE1KHfRYhmTaJAHaEK%26pid%3DApi&f=1&ipt=eac14d4f4b97067a9bc23cd7f1300ccfb01027079855dc8dd7cded62e2ceeca0&ipo=images" class="card-img-top" alt="webdev">
-            
-            <div class="card-body">
-              <h4>Web Design and development</h4>
-            </div>
-          </div>
-        </div>
-    </div>
-  </section>
-  
 
-  <!-- Education Section -->
-  <section id="education-section" class="section">
-    <div class="container"><h1 style="color: indigo;">Education </h1>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.A11gY0gxcYuVuJSWsj51fgHaDN%26pid%3DApi&f=1&ipt=992f253b687c7ec0424f98accff854455bb1f7ae3b747806a63b13d71f484922&ipo=images" class="card-img-top" alt="School 1">
-              <div class="card-body"><a  href="https://stphilomenasps.com/">
-                  <h4 style="color: black;" >St.Philomena's Public School and Junior College , Elanji</h4></a>
-                <p>i have completed my 10 (2020)</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.A11gY0gxcYuVuJSWsj51fgHaDN%26pid%3DApi&f=1&ipt=992f253b687c7ec0424f98accff854455bb1f7ae3b747806a63b13d71f484922&ipo=images" class="card-img-top" alt="School 2">
-              <div class="card-body">
-                  <a href="https://stphilomenasps.com/">
-                  <h4 style="color: black;" >St.Philomena's Public School and Junior College , Elanji</h4></a>
-                <p>i have completed my 12(2022)</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.OHDaRIQgqMesQyORdV7HoAHaDt%26pid%3DApi&f=1&ipt=55b2fe6c98364011970ed4982424f81681c1a29fc879810f9a226b53928c859e&ipo=images" class="card-img-top" alt="School 3">
-              <div class="card-body">
-                  <a href="https://www.maraugusthinosecollege.org/">
-                  <h4 style="color: black;" >Mar Augustinose College , Ramapuram</h4></a>
-                <p>i have enrolled for BCA at MAC Ramapuram(2022-2025)</p>
-              </div>
-            </div>
+        <aside class="live rise" style="--d:1.25s" aria-labelledby="live-title">
+          <h2 id="live-title">Latest on GitHub</h2>
+          <ul class="live-list" id="live-list" aria-live="polite">
+            <li class="skeleton"></li><li class="skeleton"></li><li class="skeleton"></li>
+          </ul>
+          <a class="live-all" href="https://github.com/alwinsibym" target="_blank" rel="noopener">All repositories on GitHub</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap section-grid">
+        <h2 id="about-title" class="section-title">About</h2>
+        <div class="about">
+          <figure class="portrait">
+            <img src="alwin.jpeg" alt="Portrait of Alwin Siby" width="320" height="400" loading="lazy">
+          </figure>
+          <div class="about-text">
+            <p>
+              I'm an MCA student (2025 to 2027) with a BCA background. I started with front-end work and have moved toward full-stack development and AI systems, where several programs have to work together rather than alone.
+            </p>
+            <p>
+              My focus is on building systems, not only completing tutorials. Right now I'm strengthening data structures and algorithms, working on backend development, and building the kitchen management module of FoodChain.
+            </p>
+            <p>
+              I'm looking for internships and entry-level roles ahead of graduating in 2027.
+            </p>
+            <dl class="facts">
+              <div><dt>Based in</dt><dd>Kottayam, Kerala</dd></div>
+              <div><dt>Studying</dt><dd>MCA, 2025 to 2027</dd></div>
+              <div><dt>Working on</dt><dd>Full-stack and multi-agent AI</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:alwinsiby123@gmail.com">alwinsiby123@gmail.com</a></dd></div>
+            </dl>
           </div>
         </div>
       </div>
     </section>
-    
 
-  <!-- Connect Section -->
-  <section id="connect-section" class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <h2 style="color:indigo;" >Connect with Me</h2>
-          <form id="contact-form">
-            <div class="form-group">
-              <label for="first-name">First Name</label>
-              <input type="text" class="form-control" id="first-name" required>
+    <!-- Projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap section-grid">
+        <h2 id="projects-title" class="section-title">Projects</h2>
+        <div>
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button type="button" class="chip-btn" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="chip-btn" data-filter="web" aria-pressed="false">Web</button>
+            <button type="button" class="chip-btn" data-filter="ai" aria-pressed="false">AI agents</button>
+            <button type="button" class="chip-btn" data-filter="tools" aria-pressed="false">Developer tools</button>
+          </div>
+
+          <div class="project-grid" id="project-grid">
+
+            <article class="card card--wide" data-tags="ai web">
+              <header>
+                <h3>Crisis Command</h3>
+                <p class="card-meta">Hackathon project, GATEWAYS 2026</p>
+              </header>
+              <p>
+                A multi-agent system for emergency response and resource coordination. Separate agents assess incidents, allocate resources, plan routes and give commands. When something changes, it replans only the affected parts, explains each reallocation and flags decisions that need human approval.
+              </p>
+              <p>
+                The front end is Next.js with MapLibre GL, and SQLite is the source of truth. A stateless FastAPI and LangGraph backend runs the agents, with a rule-based fallback if the language models are unavailable. The demo covers a 2,000 km² area around Madikeri, Kodagu.
+              </p>
+              <ul class="tags"><li>Next.js</li><li>FastAPI</li><li>LangGraph</li><li>MapLibre GL</li><li>SQLite</li></ul>
+            </article>
+
+            <article class="card" data-tags="ai">
+              <header>
+                <h3>Blueprint</h3>
+                <p class="card-meta">Multi-agent planning platform</p>
+              </header>
+              <p>
+                Plans software projects with a hierarchy of AI agents, then generates the project files with deterministic code. A resilience layer around the LLM service keeps planning stable when calls fail.
+              </p>
+              <ul class="tags"><li>TypeScript</li><li>LLM agents</li></ul>
+              <p class="card-links">
+                <a href="https://github.com/alwinsibym/BluePrint" target="_blank" rel="noopener">Source code<span class="sr-only"> for Blueprint</span></a>
+              </p>
+            </article>
+
+            <article class="card" data-tags="web">
+              <header>
+                <h3>Campus Bus Tracker</h3>
+                <p class="card-meta">Web app</p>
+              </header>
+              <p>
+                A bus tracking app for a campus, built with TypeScript and Vite. The repository includes a software requirements specification.
+              </p>
+              <ul class="tags"><li>TypeScript</li><li>Vite</li></ul>
+              <p class="card-links">
+                <a href="https://github.com/alwinsibym/campus-bus-tracker" target="_blank" rel="noopener">Source code<span class="sr-only"> for Campus Bus Tracker</span></a>
+              </p>
+            </article>
+
+            <article class="card" data-tags="tools">
+              <header>
+                <h3>Malayalam Meme Extension</h3>
+                <p class="card-meta">VS Code extension</p>
+              </header>
+              <p>
+                Reacts to your coding with Malayalam text, sounds and GIF popups: roasts on errors, celebrations on success, and nudges when you go idle. Meme packs install from a URL or ZIP file.
+              </p>
+              <ul class="tags"><li>TypeScript</li><li>VS Code API</li><li>Webview</li></ul>
+              <p class="card-links">
+                <a href="https://github.com/alwinsibym/malayalam-meme-extension" target="_blank" rel="noopener">Source code<span class="sr-only"> for Malayalam Meme Extension</span></a>
+              </p>
+            </article>
+
+            <article class="card" data-tags="web">
+              <header>
+                <h3>Minnal Murali Fan Site</h3>
+                <p class="card-meta">Front-end study</p>
+              </header>
+              <p>
+                A responsive fan site that carries the look and mood of the film into the layout. Built to practise design and layout, and hosted on GitHub Pages.
+              </p>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <p class="card-links">
+                <a href="https://alwinsibym.github.io/minnal_murali/index.html" target="_blank" rel="noopener">Live site<span class="sr-only"> for Minnal Murali Fan Site</span></a>
+                <a href="https://github.com/alwinsibym/minnal_murali" target="_blank" rel="noopener">Source code<span class="sr-only"> for Minnal Murali Fan Site</span></a>
+              </p>
+            </article>
+
+          </div>
+
+          <h3 class="subhead" id="more-title" hidden>More repositories</h3>
+          <ul class="repo-list" id="repo-list" aria-labelledby="more-title" hidden></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap section-grid">
+        <h2 id="skills-title" class="section-title">Skills</h2>
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <ul class="tags tags--lg"><li>C</li><li>C++</li><li>JavaScript</li><li>TypeScript</li><li>Python</li><li>SQL</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Web</h3>
+            <ul class="tags tags--lg"><li>HTML</li><li>CSS</li><li>Next.js</li><li>Vite</li><li>FastAPI</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>AI and data</h3>
+            <ul class="tags tags--lg"><li>LangGraph</li><li>Multi-agent design</li><li>LLM APIs</li><li>MySQL</li><li>SQLite</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <ul class="tags tags--lg"><li>Git</li><li>GitHub</li><li>VS Code</li></ul>
+          </div>
+          <p class="skill-note">Outside code, I take photographs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="wrap section-grid">
+        <h2 id="education-title" class="section-title">Education</h2>
+        <div>
+          <ol class="timeline">
+            <li>
+              <p class="when">2025 to 2027</p>
+              <h3>Master of Computer Applications (MCA)</h3>
+              <p>St. Joseph's College of Engineering and Technology (SJCET), Palai</p>
+            </li>
+            <li>
+              <p class="when">2022 to 2025</p>
+              <h3>Bachelor of Computer Applications (BCA)</h3>
+              <p><a href="https://www.maraugusthinosecollege.org/" target="_blank" rel="noopener">Mar Augustinose College, Ramapuram</a></p>
+            </li>
+            <li>
+              <p class="when">2022</p>
+              <h3>Higher secondary (Class 12)</h3>
+              <p><a href="https://stphilomenasps.com/" target="_blank" rel="noopener">St. Philomena's Public School and Junior College, Elanji</a></p>
+            </li>
+            <li>
+              <p class="when">2020</p>
+              <h3>Secondary school (Class 10)</h3>
+              <p><a href="https://stphilomenasps.com/" target="_blank" rel="noopener">St. Philomena's Public School and Junior College, Elanji</a></p>
+            </li>
+          </ol>
+
+          <div class="role">
+            <h3>Organizer, ASTHRA 11.0</h3>
+            <p>
+              Co-organized a two-day tech fest for the Department of Computer Applications (17 to 18 September 2026). Handled event content, budget planning, volunteer schedules and outreach to around forty colleges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap section-grid">
+        <h2 id="contact-title" class="section-title">Contact</h2>
+        <div class="contact">
+          <div class="contact-intro">
+            <p class="contact-lead">For internships, collaborations or questions, email works best.</p>
+            <ul class="social">
+              <li><a href="mailto:alwinsiby123@gmail.com"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>alwinsiby123@gmail.com</a></li>
+              <li><a href="https://www.linkedin.com/in/alwin-siby/" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a></li>
+              <li><a href="https://github.com/alwinsibym" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
+              <li><a href="https://www.instagram.com/alwin_siby_/" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</a></li>
+              <li><a href="https://twitter.com/alwinsiby26" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>X</a></li>
+            </ul>
+          </div>
+
+          <form class="form" id="contact-form" novalidate>
+            <div class="field">
+              <label for="c-name">Name</label>
+              <input id="c-name" name="name" type="text" autocomplete="name" required>
+              <p class="err" data-for="c-name" hidden>Enter your name.</p>
             </div>
-            <div class="form-group">
-              <label for="last-name">Last Name</label>
-              <input type="text" class="form-control" id="last-name" required>
+            <div class="field">
+              <label for="c-email">Your email</label>
+              <input id="c-email" name="email" type="email" autocomplete="email" required>
+              <p class="err" data-for="c-email" hidden>Enter a valid email address.</p>
             </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="text" class="form-control" id="phone" required>
+            <div class="field">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="message" rows="5" required></textarea>
+              <p class="err" data-for="c-message" hidden>Write a message.</p>
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea class="form-control" id="message" rows="3" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <p class="form-note" id="form-status" role="status">This opens your email app with the message filled in.</p>
           </form>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-        <p style="color: aliceblue;">© Alwin Siby</p>
-      <p style="color: aliceblue;">Follow Me on Social Media:</p>
-      <a href="https://github.com/alwinsibym"><img src="github white.png" alt="GitHub"></a>
-      <a href="https://www.linkedin.com/in/alwin-siby-8528ba22b/"><img src="linkedin white.png" alt="LinkedIn"></a>
-      <a href="https://www.instagram.com/alwin_siby_/"><img src="instagram white.png" alt="Instagram"></a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="kasavu" aria-hidden="true"></div>
+    <div class="wrap footer-row">
+      <p>&copy; <span id="year">2026</span> Alwin Siby</p>
+      <ul class="social social--icons">
+        <li><a href="https://github.com/alwinsibym" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/alwin-siby/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+        <li><a href="https://www.instagram.com/alwin_siby_/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+        <li><a href="https://twitter.com/alwinsiby26" target="_blank" rel="noopener" aria-label="X"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></a></li>
+      </ul>
+      <a class="to-top" href="#top">Back to top</a>
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    // JavaScript Form Validation
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      validateForm();
-    });
-
-    function validateForm() {
-      var firstName = document.getElementById('first-name').value;
-      var lastName = document.getElementById('last-name').value;
-      var phone = document.getElementById('phone').value;
-      var email = document.getElementById('email').value;
-      var message = document.getElementById('message').value;
-
-      // Perform validation logic here
-
-      // Example validation: check if all fields are filled
-      if (firstName === '' || lastName === '' || phone === '' || email === '' || message === '') {
-        alert('Please fill all fields');
-      } else {
-        // Form is valid, submit the form
-        document.getElementById('contact-form').submit();
-      }
-    }
-
-    // JavaScript Animation
-    const text = "Hey, I'm Alwin Siby. Second year BCA student.";
-    let index = 0;
-    const speed = 100; // Adjust the typing speed here (in milliseconds)
-
-    function typeWriter() {
-      if (index < text.length) {
-        document.getElementById("animated-text").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-
-    window.onload = typeWriter;
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
